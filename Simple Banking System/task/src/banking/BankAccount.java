@@ -10,18 +10,16 @@ public class BankAccount {
     String accountNumber;
     int pin;
     double balance;
-    boolean logged = false;
+
 
 
     private String accountIdentifier;
     private String checksum = Integer.toString(random.nextInt(9)+1);
 
-    public BankAccount createBankAccount() {
-        BankAccount bankAccount = new BankAccount();
-        bankAccount.accountNumber=accountNumberGenerator(BIN);
-        bankAccount.pin = generatePin();
-        bankAccount.balance=0;
-        return bankAccount;
+    public BankAccount() {
+        this.accountNumber=accountNumberGenerator(BIN);
+        this.pin = generatePin();
+        this.balance=0;
     }
 
     private String accountNumberGenerator(String BIN) {
