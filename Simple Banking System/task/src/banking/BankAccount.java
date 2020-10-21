@@ -51,23 +51,23 @@ public class BankAccount {
     }
 
     private String checkSum(String BIN, String accountIdentifier) {
-        int sum=0;
-        int checkSum=0;
+        int sum = 0;
+        int checkSum = 0;
         String number = BIN + accountIdentifier;
         String[] numberStringArr = number.split("");
 
         int[] numberIntArr = new int[number.length()];
         for (int i = 0; i < number.length(); i++) {
-            numberIntArr[i]=Integer.parseInt((numberStringArr[i]));
+            numberIntArr[i] = Integer.parseInt((numberStringArr[i]));
         }
 
         //Luhn algorithm
         for (int i = 0; i < numberIntArr.length; i++) {
 
-            if(i==0 || i%2==0){
-                numberIntArr[i]=numberIntArr[i]*2;
-                if (numberIntArr[i]>9){
-                    numberIntArr[i]=numberIntArr[i]-9;
+            if (i == 0 || i % 2 == 0) {
+                numberIntArr[i] = numberIntArr[i] * 2;
+                if (numberIntArr[i] > 9) {
+                    numberIntArr[i] = numberIntArr[i] - 9;
                 }
             }
 
@@ -75,18 +75,18 @@ public class BankAccount {
 
         //sum of digits
         for (int i = 0; i < numberIntArr.length; i++) {
-            sum=sum+numberIntArr[i];
+            sum = sum + numberIntArr[i];
         }
 
-        while (true){
-            if((sum+checkSum)%10==0){
+        while (true) {
+            if ((sum + checkSum) % 10 == 0) {
                 break;
-            }else{
+            } else {
                 checkSum++;
             }
         }
 
-        this.checksum=Integer.toString(checkSum);
+        this.checksum = Integer.toString(checkSum);
         return this.checksum;
     }
 }
