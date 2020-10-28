@@ -39,7 +39,7 @@ files:
     import java.util.regex.Matcher;
     import java.util.regex.Pattern;
 
-    public class BankingSystem extends StageTest<String> {
+    public class SimpleBankSystemTest extends StageTest<String> {
 
         private static final String databaseFileName = "card.s3db";
         private static final String tempDatabaseFileName = "tempDatabase.s3db";
@@ -489,5 +489,5 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/projects/93/stages/517/implement
-status: Unchecked
-record: -1
+status: Failed
+record: 1

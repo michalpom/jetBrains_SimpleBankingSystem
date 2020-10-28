@@ -25,7 +25,7 @@ files:
     import java.util.regex.Matcher;
     import java.util.regex.Pattern;
 
-    public class BankingSystem extends StageTest<String> {
+    public class SimpleBankSystemTest extends StageTest<String> {
 
         private static final Pattern cardNumberPattern = Pattern.compile("400000\\d{10}");
         private static final Pattern pinPattern = Pattern.compile("^\\d{4}$", Pattern.MULTILINE);
@@ -302,8 +302,9 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/93/stages/516/implement
-status: Failed
+status: Solved
 feedback:
-  message: Compilation Failed
-  time: Wed, 21 Oct 2020 18:58:43 UTC
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/93/stages/516/implement">JetBrains
+    Academy</a>
+  time: Wed, 28 Oct 2020 19:37:44 UTC
 record: -1

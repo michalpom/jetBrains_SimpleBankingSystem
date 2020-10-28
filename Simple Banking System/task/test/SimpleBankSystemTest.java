@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class BankingSystem extends StageTest<String> {
+public class SimpleBankSystemTest extends StageTest<String> {
 
     private static final Pattern cardNumberPattern = Pattern.compile("400000\\d{10}");
     private static final Pattern pinPattern = Pattern.compile("^\\d{4}$", Pattern.MULTILINE);
